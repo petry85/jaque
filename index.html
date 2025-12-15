@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Jaquet</title>
+  
+</head>
+<body>
+<div class="container">
+    <!--<h1 class="titulo">Resultado campanha Neodent</h1>-->
+    <div class="stage">
+       <h1 class="titulo" id="titulo">Olá moça... só queria dizer: </h1>
+       <!--<div class="curtain left-curtain"></div>-->
+      <!--<div class="curtain right-curtain"></div>-->
+      <img src="imagem/esquerda.png" class="dentista esquerda" />
+      <img src="imagem/direita.png" class="dentista direita" />
+      <div class="image-container">
+        <img src="imagem/rose_final.png" alt="Imagem revelada" />      
+      </div>
+    
+  </div>
+  <button class="reveal-button" onclick="abrirCortina()">Revelar</button>
+
+  <script>
+  function abrirCortina() {
+    document.querySelector('.dentista.esquerda').style.transform = 'translateX(-100%)';
+    document.querySelector('.dentista.direita').style.transform = 'translateX(100%)';
+
+    const imagem = document.querySelector('.image-container img');
+    imagem.style.opacity = '1';
+
+    const titulo = document.getElementById('titulo');
+    titulo.style.opacity = '0';
+    setTimeout(() => {
+      titulo.style.display = 'none';
+    }, 1000);
+
+    // Substitui o botão "Revelar" por um botão de download
+    const botaoAntigo = document.querySelector('.reveal-button');
+    const container = botaoAntigo.parentNode;
+
+    
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
