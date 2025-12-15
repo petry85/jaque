@@ -29,7 +29,7 @@ body {
       width: 50%;
       height: 100%;
       /*background: linear-gradient(to right, #03640b, #03640b);*/
-      background-image: "imagem/direita.png";
+      background-image: "direita.png";
       z-index: 2;
       transition: transform 2s ease-in-out;
     }
@@ -143,6 +143,7 @@ body {
     padding: 8px 14px;
   }
 }*/
+
 
 
 
