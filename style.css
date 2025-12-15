@@ -1,0 +1,155 @@
+body {
+        margin: 0;
+        background-color: #0c0202;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* empilha verticalmente */
+        height: 100vh;
+    }
+
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .stage {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      border: 5px solid #fff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .curtain {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      /*background: linear-gradient(to right, #03640b, #03640b);*/
+      background-image: "imagem/direita.png";
+      z-index: 2;
+      transition: transform 2s ease-in-out;
+    }
+
+    .left-curtain {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .right-curtain {
+      right: 0;
+      transform: translateX(0);
+    }
+
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0; /* começa invisível */
+      transition: opacity 4.5s ease-in-out;
+    }
+
+    .reveal-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #800000;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+
+
+.titulo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Changa One", sans-serif;
+  font-size: 28px;
+  color: #ffffff;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap; /* evita quebra de linha indesejada */
+  transition: opacity 1s ease;
+}
+
+
+.dentista {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: transform 2s ease-in-out;
+  z-index: 2;
+}
+
+.dentista.esquerda {
+  left: 0;
+  transform: translateX(0);
+  width: 50%;
+  object-fit: contain;
+}
+
+.dentista.direita {
+  right: 0;
+  width: 50%;
+  transform: translateX(0);
+  object-fit: contain;
+}
+
+
+@media (max-width: 420px) {
+  .stage {
+    max-width: 50%;
+  }
+ .titulo {
+    font-size: 1em;
+  }
+/*
+  .dentista {
+    width: 22vw;
+    max-width: 50px;
+    min-width: 28px;
+    top: 18px;
+  }
+  .image-container {
+    width: 74px;
+    height: 74px;
+    margin: 25px auto 9px auto;
+  }
+  .reveal-button {
+    font-size: 0.9em;
+    padding: 8px 14px;
+  }
+}*/
+
+
+
+
+
+
+
+
+
+
